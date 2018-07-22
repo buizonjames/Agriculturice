@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/history_icon"
+            android:title="History" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_logo"
+            android:title="About"/>
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/about_logo"
+            android:title="Help" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/nav_exit"
+            android:title="Exit" />
+    </group>
+</menu>
