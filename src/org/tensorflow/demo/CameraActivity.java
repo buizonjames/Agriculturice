@@ -1,24 +1,11 @@
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/*NOTE: Change alpha to 1.0 on activity_connection_fragment for debugging purposes*/
 
 package org.tensorflow.demo;
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.Image.Plane;
 import android.media.ImageReader.OnImageAvailableListener;
@@ -28,7 +15,9 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Size;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import java.nio.ByteBuffer;
 import org.tensorflow.demo.env.Logger;
@@ -47,6 +36,8 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
   private Handler handler;
   private HandlerThread handlerThread;
 
+  private ImageButton btnAnalyze;
+
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
     LOGGER.d("onCreate " + this);
@@ -54,12 +45,26 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     setContentView(R.layout.activity_camera);
+    btnAnalyze = (ImageButton)findViewById(R.id.btnAnalyze);
+
+    btnAnalyze.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        startResultActivity();
+      }
+    });
 
     if (hasPermission()) {
       setFragment();
     } else {
       requestPermission();
     }
+  }
+
+  private void startResultActivity(){
+    Intent intent = new Intent(CameraActivity.this, ResultActivity.class);
+    startActivity(intent);
+    finish();
   }
 
   @Override

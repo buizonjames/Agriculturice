@@ -1,19 +1,3 @@
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.tensorflow.demo;
 
 import android.graphics.Bitmap;
@@ -67,7 +51,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private static final String OUTPUT_NAME = "final_result";
   */
 
-  private static final int INPUT_SIZE = 299;
+  private static final int INPUT_SIZE = 320;
   private static final int IMAGE_MEAN = 128;
   private static final float IMAGE_STD = 128.0f;
   private static final String INPUT_NAME = "Mul";
@@ -76,7 +60,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private static final String MODEL_FILE = "file:///android_asset/rounded_graph.pb";
   private static final String LABEL_FILE = "file:///android_asset/retrained_labels.txt";
 
-  private static final boolean SAVE_PREVIEW_BITMAP = false;
+  private static final boolean SAVE_PREVIEW_BITMAP = true;
 
   private static final boolean MAINTAIN_ASPECT = true;
 
@@ -93,7 +77,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private Bitmap rgbFrameBitmap = null;
   private Bitmap croppedBitmap = null;
 
-  private Bitmap cropCopyBitmap;
+  public Bitmap cropCopyBitmap;
 
   private boolean computing = false;
 
@@ -105,6 +89,10 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private BorderedText borderedText;
 
   private long lastProcessingTimeMs;
+
+  public Bitmap getCropCopyBitmap(){
+    return cropCopyBitmap;
+  }
 
   @Override
   protected int getLayoutId() {

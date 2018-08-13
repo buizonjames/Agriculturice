@@ -27,7 +27,8 @@
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="112dp"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:alpha="0" />
 
     <org.tensorflow.demo.OverlayView
         android:id="@+id/debug_overlay"

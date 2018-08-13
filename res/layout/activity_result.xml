@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_up">
+
+    <ImageButton
+        android:id="@+id/btnSolution2"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/solution" />
+
+    <ImageView
+        android:id="@+id/diseaseInfo"
+        android:layout_width="310dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/imgBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/diseaseinfo" />
+
+    <ImageView
+        android:id="@+id/imgBox"
+        android:layout_width="310dp"
+        android:layout_height="290dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/imagebox" />
+
+    <ImageView
+        android:id="@+id/imgPlant"
+        android:layout_width="290dp"
+        android:layout_height="260dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        app:srcCompat="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/rectangle" />
+
+    <ImageButton
+        android:id="@+id/btnBack3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/backbutton" />
+
+    <ImageButton
+        android:id="@+id/btnAbout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/info" />
+
+    <ImageButton
+        android:id="@+id/btnHelp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/help" />
+
+    <ImageView
+        android:id="@+id/results"
+        android:layout_width="310dp"
+        android:layout_height="155dp"
+        android:layout_below="@+id/diseaseInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/descriptionbox" />
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imgPlant"
+        android:layout_alignTop="@+id/results"
+        android:layout_marginTop="8dp"
+        android:text="[Disease Name]"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblName"
+        android:layout_below="@+id/lblName"
+        android:layout_marginTop="8dp"
+        android:text="[Disease description here]"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+</RelativeLayout>
