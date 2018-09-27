@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_up"
+    tools:context=".SolutionActivity">
+
+    <ImageView
+        android:id="@+id/solutionbox"
+        android:layout_width="310dp"
+        android:layout_height="466dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        app:srcCompat="@drawable/solutionbox" />
+
+    <ImageView
+        android:id="@+id/diseaseManage"
+        android:layout_width="310dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/disease_manage" />
+
+    <ImageButton
+        android:id="@+id/btnHelp4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/help" />
+
+    <ImageButton
+        android:id="@+id/btnAbout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/info" />
+
+    <ImageButton
+        android:id="@+id/btnBack4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/backbutton" />
+
+    <TextView
+        android:id="@+id/txtSolution"
+        android:layout_width="290dp"
+        android:layout_height="446dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:minEms="42"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="	• Adjust planting times to when green \n\t  leafhopper are not in season or abundant, \n\t  if known\n\n\t• Plow infected stubbles immediately after \n\t  harvest to reduce inoculum sources and \n\t  destroy the eggs and breeding sites of \n\t  green leaf hoppers "
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/rectangle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/rectangle" />
+
+</RelativeLayout>

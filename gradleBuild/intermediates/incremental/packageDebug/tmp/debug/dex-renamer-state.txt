@@ -1,0 +1,7 @@
+#Sat Sep 08 01:10:13 CST 2018
+base.0=C\:\\Users\\James\\tensorflow-for-poets-2-master - Copy (2)\\tensorflow-for-poets-2-master\\android\\tfmobile\\gradleBuild\\intermediates\\transforms\\dexMerger\\debug\\0
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\James\\tensorflow-for-poets-2-master - Copy (2)\\tensorflow-for-poets-2-master\\android\\tfmobile\\gradleBuild\\intermediates\\transforms\\dexMerger\\debug\\1

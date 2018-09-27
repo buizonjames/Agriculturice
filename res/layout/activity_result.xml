@@ -7,7 +7,7 @@
     android:background="@drawable/start_up">
 
     <ImageButton
-        android:id="@+id/btnSolution2"
+        android:id="@+id/btnSolution"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"

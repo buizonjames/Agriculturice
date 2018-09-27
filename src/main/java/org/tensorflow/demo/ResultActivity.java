@@ -25,6 +25,8 @@ public class ResultActivity extends AppCompatActivity {
 
     private TextView lblDiseaseName;
     private TextView lblDiseaseDescription;
+
+    private  ImageButton btnSolution;
     private ImageButton btnBack;
 
     private String diseaseName;
@@ -42,6 +44,14 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startCameraActivity();
+            }
+        });
+
+        btnSolution = (ImageButton)findViewById(R.id.btnSolution);
+        btnSolution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSolutionActivity();
             }
         });
 
@@ -85,6 +95,12 @@ public class ResultActivity extends AppCompatActivity {
 
     private void startCameraActivity(){
         Intent intent = new Intent(ResultActivity.this, ClassifierActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void startSolutionActivity(){
+        Intent intent = new Intent(ResultActivity.this, SolutionActivity.class);
         startActivity(intent);
         finish();
     }
