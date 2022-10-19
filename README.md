@@ -1,23 +1,18 @@
-# TensorFlow Android Camera Demo
+# AgricultuRice
 
 This folder contains an example application utilizing TensorFlow for Android
 devices.
 
 ## Description
 
-The demos in this folder are designed to give straightforward samples of using
-TensorFlow in mobile applications.
-
 Inference is done using the [TensorFlow Android Inference Interface](../../../tensorflow/contrib/android),
 which may be built separately if you want a standalone library to drop into your
 existing application. Object tracking and YUV -> RGB conversion is handled by
 libtensorflow_demo.so.
 
-A device running Android 5.0 (API 21) or higher is required to run the demo due
+A device running Android 5.0 (API 21) or higher is required to run the application due
 to the use of the camera2 API, although the native libraries themselves can run
 on API >= 14 devices.
-
-## Current samples:
 
 1. [TF Classify](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/android/src/org/tensorflow/demo/ClassifierActivity.java):
         Uses the [Google Inception](https://arxiv.org/abs/1409.4842)
